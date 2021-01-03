@@ -1,0 +1,118 @@
+@import "reset.css";
+
+body {
+    background-color: #010129;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+
+.portfoliio {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 70%;
+    height: 60px;
+    position: fixed;
+    background-color: #010129;
+    z-index: 1;
+}
+
+header a,
+li {
+    margin-top: 20px;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+}
+
+header .top_left {
+    font-size: 32px;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    color: orange;
+    position: relative;
+    float: left;
+}
+
+header .top_right {
+    position: relative;
+    display: flex;
+    flex: end;
+    float: right;
+}
+
+header .top_right .top_menu {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    text-align: right;
+}
+
+.one {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    top: 70px;
+    justify-content: space-between;
+}
+
+.one .one_left {
+    margin-top: 200px;
+}
+
+.one .one_left h1 {
+    font-size: 4em;
+    margin-bottom: 70px;
+}
+
+.one .one_left p {
+    font-size: 2em;
+    line-height: 100px;
+}
+
+.one .one_left p .dale {
+    color: orange;
+}
+
+.one .one_right {
+    width: 550px;
+    height: 770px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .one {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        top: 200px;
+        left: 0px;
+        padding: 80px 0px;
+    }
+
+    .one .one_right {
+        display: none;
+    }
+
+    .one .one_left {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+}
