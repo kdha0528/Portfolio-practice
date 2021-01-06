@@ -4,39 +4,87 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dale's Portfolio</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
+        <scriptc src="app.js"></scriptc>
     </head>
     <body>
-        <div class="portfolio">
-            <header id="headerJS">
-                <img src="img/output-onlinepngtools.png" />
-                <a href="#home" rel="home" class="top_left"> Dale </a>
-
-                <ul class="top_right">
-                    <li class="top_menu"><a href="#home">Home</a></li>
-                    <li class="top_menu"><a href="#about">About</a></li>
-                    <li class="top_menu"><a href="#project">Project</a></li>
-                    <li class="top_menu"><a href="#contact">Contect</a></li>
+        <!-- NavBar -->
+        <nav id="navbar">
+            <div class="navbar__logo">
+                <img src="img/whale.png" alt="my_logo" />
+                <a href="#home" rel="home"> Dale </a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu">
+                    <li class="navbar__menu__item"><a href="#home">Home</a></li>
+                    <li class="navbar__menu__item"><a href="#about">About</a></li>
+                    <li class="navbar__menu__item"><a href="#project">Project</a></li>
+                    <li class="navbar__menu__item"><a href="#contact">Contect</a></li>
                 </ul>
-            </header>
-
-            <section id="home">
-                <div class="one">
-                    <div class="one_left">
-                        <h1>Hello World!</h1>
-                        <p>
-                            I'm <a href="#about" class="dale">Dale</a>. I'm studying to be a developer.<br />
-                            I feel greateful for you coming here, <br />
-                            and I hope you enjoy reading my portfolio.
-                        </p>
-                    </div>
-                    <img src="img/2Y3A8104 copy~2.jpg" class="one_right" />
-                </div>
-            </section>
-
-            <section id="about"></section>
-        </div>
-
-        <scriptc src="app.js"></scriptc>
+            </div>
+        </nav>
+        <!-- Home -->
+        <section id="home">
+            <div class="home">
+                <img src="img/dale.png" class="home__img" alt="my_photo" />
+                <h1 class="home__title">Hello, I'm <a href="#about" class="home__title__dale">Dale</a></h1>
+                <p class="home__discription">
+                    I'm studying to become a developer.<br />
+                    and I hope you enjoy reading my portfolio.
+                </p>
+            </div>
+        </section>
+        <!-- About -->
+        <section id="about">
+            <h1>About</h1>
+            <div class="about__profile">
+                <h3 class="about__profile__title">Profile</h3>
+                <ul class="about__profile__items">
+                    <li class="about__profile__item">1</li>
+                    <li class="about__profile__item">2</li>
+                    <li class="about__profile__item">3</li>
+                    <li class="about__profile__item">4</li>
+                    <li class="about__profile__item">5</li>
+                </ul>
+            </div>
+            <div class="about__experiences">
+                <h3 class="about__experiences__title">Experiences</h3>
+                <ul class="about__experiences__items">
+                    <li class="about__experiences__item">1</li>
+                    <li class="about__experiences__item">2</li>
+                    <li class="about__experiences__item">3</li>
+                    <li class="about__experiences__item">4</li>
+                    <li class="about__experiences__item">5</li>
+                </ul>
+            </div>
+            <div class="about__skills">
+                <h3 class="about__skills__title">Skills</h3>
+                <ul class="about__skills__items">
+                    <li class="about__skills__item">1</li>
+                    <li class="about__skills__item">2</li>
+                    <li class="about__skills__item">3</li>
+                    <li class="about__skills__item">4</li>
+                    <li class="about__skills__item">5</li>
+                </ul>
+            </div>
+            <div class="about__tools">
+                <h3 class="about__tools__title">Tools</h3>
+                <ul class="about__tools__items">
+                    <li class="about__tools__item">1</li>
+                    <li class="about__tools__item">2</li>
+                    <li class="about__tools__item">3</li>
+                    <li class="about__tools__item">4</li>
+                    <li class="about__tools__item">5</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Project -->
+        <section id="project"></section>
+        <!-- Contact -->
+        <section id="contact"></section>
+        <!-- Footer -->
+        <footer id="footer"></footer>
     </body>
 </html>
