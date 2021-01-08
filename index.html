@@ -7,30 +7,30 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         <scriptc src="app.js"></scriptc>
     </head>
     <body>
         <!-- NavBar -->
         <nav id="navbar">
-            <div class="navbar__logo">
-                <img src="img/whale.png" alt="my_logo" />
-                <a href="#home" rel="home"> Dale </a>
-            </div>
-            <div class="navbar__menu">
+                <a href="#home" class="navbar__logo">
+                    <img src="img/whale.png" alt="my_logo" /><h1>Dale</h1> 
+                </a>
                 <ul class="navbar__menu">
                     <li class="navbar__menu__item"><a href="#home">Home</a></li>
                     <li class="navbar__menu__item"><a href="#about">About</a></li>
-                    <li class="navbar__menu__item"><a href="#skillset">skillset</a></li>
+                    <li class="navbar__menu__item"><a href="#skills">skills</a></li>
                     <li class="navbar__menu__item"><a href="#projects">Projects</a></li>
                     <li class="navbar__menu__item"><a href="#contact">Contect</a></li>
                 </ul>
-            </div>
         </nav>
         <!-- Home -->
-        <section id="home">
+        <section id="home" class="section">
             <div class="home">
-                <img src="img/dale.png" class="home__img" alt="my_photo" />
-                <h1 class="home__title">Hello, I'm <a href="#about" class="home__title__dale">Dale</a></h1>
+                <img src="img/dale.png" class="home__img" alt="my_photo" hr/>
+                <p class="home__title">Hello, I'm <span class="home__title__dale">Dale</span></p>
                 <p class="home__discription">
                     I'm studying to become a developer.<br />
                     and I hope you enjoy reading my portfolio.
@@ -38,51 +38,57 @@
             </div>
         </section>
         <!-- About -->
-        <section id="about">
+        <section id="about" class="section">
             <h1>About</h1>
-            <div class="about__profile">
-                <h2 class="about__title">Profile</h2>
-                <ul class="about__description">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
-            <div class="about__experiences">
-                <h2 class="about__title">Education</h2>
-                <ul class="about__description">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
-            <div class="about__skills">
-                <h2 class="about__title">Certificates</h2>
-                <ul class="about__description">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </div>
-            <div class="about__tools">
-                <h2 class="about__title">Experiences</h2>
-                <ul class="about__description">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
+            <div class="about">
+                <div class="about__left">
+                    <div class="about__profile">
+                        <h2 class="about__title">Profile</h2>
+                        <ul class="about__description">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                    <div class="about__certificates">
+                        <h2 class="about__title">Certificates</h2>
+                        <ul class="about__description">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__right">
+                    <div class="about__education">
+                        <h2 class="about__title">Education</h2>
+                        <ul class="about__description">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                    <div class="about__experiences">
+                        <h2 class="about__title">Experiences</h2>
+                        <ul class="about__description">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- skillset -->
-        <section id="skills">
+        <section id="skills" class="section">
             <h1>skills</h1>
             <p></p>
             <div class="skillset">
@@ -157,18 +163,15 @@
             </div>
         </section>
         <!-- Projects -->
-        <section id="projects">
+        <section id="projects" class="section">
             <h1>Projects</h1>
             <h2 class="projects__title">Title</h2>
             <div class="projects">
-                <button class="projects__leftBtn"></button>
-                <a href="https://github.com/kdha0528" class="project" target="blank">
-                    <img class="project__img" src="img/project.png" alt="project" />
-                    <div class="project__img__description">
-                        <h3>Go to GitHub</h3>
-                    </div>
+                <button class="projects__leftBtn"><i class="fas fa-caret-left"></i></button>
+                <a href="https://github.com/kdha0528" class="project" target="_blank">
+                    <img class="project__img" src="img/project.png" title="Go to GutHub" alt="project" />
                 </a>
-                <button class="projects__rightBtn"></button>
+                <button class="projects__rightBtn"><i class="fas fa-caret-right"></i></button>
             </div>
             <ul class="projects__description">
                 <li>Description :</li>
@@ -177,7 +180,26 @@
             </ul>
         </section>
         <!-- Contact -->
-        <section id="contact"></section>
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <ul class="contact">
+                <li class="contact__phone"><i class="fas fa-mobile-alt"> Phone : 010 7544 4357</i></li>
+                <li class="contact__kakao">
+                    <img src="img/kakaotalk.png" alt="kakao talk" class="contact__kakao__img" />
+                    kakao : kdha4585
+                </li>
+                <li class="contact__mail">
+                    <a href="mailto:kdha4585@gmail.com" target="_balnk">
+                        <i class="far fa-envelope"> Email : kdha485@gmail.com</i>
+                    </a>
+                </li>
+                <li class="contact__git">
+                    <a href="https://github.com/kdha0528" target="_balnk">
+                        <i class="fab fa-github" alt="GitHub"> https://github.com/kdha0528</i>
+                    </a>
+                </li>
+            </ul>
+        </section>
         <!-- Footer -->
         <footer id="footer"></footer>
     </body>
