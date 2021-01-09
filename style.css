@@ -31,7 +31,7 @@ button {
     outline: none;
     color: white;
 }
-
+/* NavBar */
 #navbar {
     width: 100%;
     height: 60px;
@@ -91,6 +91,38 @@ button {
     transform: scale(1.1);
 }
 
+.nevbar__menu__icon {
+    display: none;
+    transition: all 0.3s;
+    font-size: 2em;
+    margin-right: 6%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    #navbar {
+        overflow: visible;
+    }
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 85%;
+        align-items: center;
+        opacity: 0;
+    }
+
+    .nevbar__menu__icon {
+        display: block;
+    }
+
+    .navbar__menu__icon:active .navbar__menu {
+        opacity: 1;
+        top: 70px;
+    }
+}
+/* Home */
 .home {
     position: relative;
     display: flex;
@@ -129,8 +161,9 @@ button {
     text-align: center;
     max-width: 1200px;
     font-size: 1rem;
-    width: 80%;
     margin: auto;
+    align-items: center;
+    width: 80%;
 }
 
 .section h1 {
@@ -138,17 +171,11 @@ button {
     width: 0%;
     padding-top: 100px;
 }
-
+/* About */
 .about {
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
-}
-
-@media screen and (min-width: 1200px) {
-    .about__right {
-        padding-right: 20%;
-    }
 }
 
 .about__title {
@@ -159,11 +186,13 @@ button {
 .about__left {
     display: flex;
     flex-direction: column;
+    flex-basis: 50%;
 }
 
 .about__right {
     display: flex;
     flex-direction: column;
+    flex-basis: 50%;
 }
 
 .about__description {
@@ -177,5 +206,111 @@ button {
 .about__experiences {
     margin-top: 50px;
 }
-@media screen and (max-width: 1200px) {
+/* Skills */
+.skillset {
+    display: flex;
+    background-color: rgb(129, 129, 129);
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+.skillset__left {
+    flex-basis: 60%;
+    background-color: rgb(58, 58, 58);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.skillset__title {
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.skill {
+    margin-bottom: 16px;
+    padding: 0 40px;
+}
+
+.skill_bar {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(87, 86, 86);
+}
+
+.skill__value {
+    height: 3px;
+    background-color: orange;
+}
+
+.skillset__right {
+    flex-basis: 40%;
+}
+
+.tools {
+    background-color: rgb(87, 86, 86);
+    border-top-right-radius: 10px;
+}
+
+.tools,
+.etc {
+    padding: 20px;
+}
+
+.tools__list,
+.Etc__list {
+    padding: 10px;
+    line-height: 43px;
+}
+/* Project */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project__title {
+    font-size: 2rem;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.project__animation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project__img {
+    width: 500px;
+    height: 300px;
+}
+
+.project__img img {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+
+.project__leftBtn,
+.project__rightBtn {
+    margin: auto;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.project__leftBtn:hover,
+.project__rightBtn:hover {
+    transform: scale(1.1);
+    color: orange;
+}
+
+.project__description {
+    padding: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
 }

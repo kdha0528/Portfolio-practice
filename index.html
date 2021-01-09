@@ -25,6 +25,7 @@
                     <li class="navbar__menu__item"><a href="#projects">Projects</a></li>
                     <li class="navbar__menu__item"><a href="#contact">Contect</a></li>
                 </ul>
+                <div class="nevbar__menu__icon"><i class="fas fa-bars"></i></div>
         </nav>
         <!-- Home -->
         <section id="home" class="section">
@@ -96,47 +97,47 @@
                     <h3 class="skillset__title">skills</h3>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>HTML</span>
-                            <span>0%</span>
+                            <div><i class="fab fa-html5"></i><span> HTML</span></div>
+                            <span>50%</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value" style="width: 50%"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>CSS</span>
-                            <span>0%</span>
+                            <div><i class="fab fa-css3-alt"></i><span> CSS</span></div>
+                            <span>30%</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value"style="width: 30%"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>JAVASCRIPT</span>
-                            <span>0%</span>
+                            <div><i class="fab fa-js-square"></i><span> JAVASCRIPT</span></div>
+                            <span>10%</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value"style="width: 10%"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>REACT</span>
+                            <div><i class="fab fa-react"></i><span> REACT</span></div>
                             <span>0%</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value"style="width: 0%"></div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill__description">
-                            <span>NODE.JS</span>
+                            <div><i class="fab fa-node-js"></i><span> NODE.JS</span></div>
                             <span>0%</span>
                         </div>
                         <div class="skill_bar">
-                            <div class="skill__value"></div>
+                            <div class="skill__value"style="width: 0%"></div>
                         </div>
                     </div>
                 </div>
@@ -165,19 +166,21 @@
         <!-- Projects -->
         <section id="projects" class="section">
             <h1>Projects</h1>
-            <h2 class="projects__title">Title</h2>
-            <div class="projects">
-                <button class="projects__leftBtn"><i class="fas fa-caret-left"></i></button>
-                <a href="https://github.com/kdha0528" class="project" target="_blank">
-                    <img class="project__img" src="img/project.png" title="Go to GutHub" alt="project" />
-                </a>
-                <button class="projects__rightBtn"><i class="fas fa-caret-right"></i></button>
+            <div class="project">
+                <h2 class="project__title">Title</h2>
+                <div class="project__animation">
+                    <button class="project__leftBtn"><i class="fas fa-caret-left"></i></button>
+                    <a href="https://github.com/kdha0528" class="project__img" target="_blank">
+                        <img src="img/project.png" title="Go to GitHub" alt="GitHub"/>
+                    </a>
+                    <button class="project__rightBtn"><i class="fas fa-caret-right"></i></button>
+                </div>
+                <ul class="project__description">
+                    <li>Description : C++을 이용한 마켓, 관리자 아이디로 관리할 수 있음</li>
+                    <li>My Work : All </li>
+                    <li>Using Skills : C++, Git, Visual Studio</li>
+                </ul>
             </div>
-            <ul class="projects__description">
-                <li>Description :</li>
-                <li>My Work :</li>
-                <li>Using Skills :</li>
-            </ul>
         </section>
         <!-- Contact -->
         <section id="contact" class="section">
@@ -185,7 +188,7 @@
             <ul class="contact">
                 <li class="contact__phone"><i class="fas fa-mobile-alt"> Phone : 010 7544 4357</i></li>
                 <li class="contact__kakao">
-                    <img src="img/kakaotalk.png" alt="kakao talk" class="contact__kakao__img" />
+                    <img src="img/kakaotalk.png" alt="kakao talk" class="contact__kakao__img" style="width:16px; display: inline;"/>
                     kakao : kdha4585
                 </li>
                 <li class="contact__mail">
