@@ -1,4 +1,4 @@
-@import "reset.css";
+@import 'reset.css';
 
 html {
     scroll-behavior: smooth;
@@ -11,7 +11,7 @@ body {
     margin: auto;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     cursor: default;
 }
 
@@ -34,14 +34,19 @@ button {
 /* NavBar */
 #navbar {
     width: 100%;
-    height: 60px;
+    padding: 16px;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    overflow: hidden;
+    background-color: transparent;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar.navbar__dark {
+    background-color: black;
+    padding: 5px;
 }
 
 .navbar__logo {
@@ -82,7 +87,7 @@ button {
     position: relative;
     cursor: pointer;
     box-sizing: border-box;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid transparent;
 }
 
 .navbar__menu__item:hover {
@@ -312,7 +317,7 @@ button {
 .project__img:hover .project__description {
     opacity: 0.8;
     top: 0px;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
 }
 /* contact */
 .contactMe {
@@ -353,13 +358,13 @@ button {
 .contact__git i:hover,
 .contact__mail i:hover {
     color: orange;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact__sendBtn:hover {
     border-color: orange;
     color: orange;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
 }
 /* footer */
 .footer {
@@ -379,6 +384,7 @@ button {
         flex-direction: column;
         align-items: flex-start;
         overflow: visible;
+        transition: all 0.3ms ease-in-out;
     }
 
     .navbar__menu {
