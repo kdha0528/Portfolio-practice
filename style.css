@@ -340,3 +340,20 @@ button {
     top: 0px;
     transition: all 0.3s ease-in;
 }
+/* contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 70px;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 100px;
+}
+/* footer */
+.footer {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-top: 2px solid white;
+}
