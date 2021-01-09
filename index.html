@@ -43,7 +43,7 @@
             <h1>About</h1>
             <div class="about">
                 <div class="about__left">
-                    <div class="about__profile">
+                    <div>
                         <h2 class="about__title">Profile</h2>
                         <ul class="about__description">
                             <li>1</li>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="about__right">
-                    <div class="about__education">
+                    <div>
                         <h2 class="about__title">Education</h2>
                         <ul class="about__description">
                             <li>1</li>
@@ -185,10 +185,11 @@
         <!-- Contact -->
         <section id="contact" class="section">
             <h1>Contact</h1>
+            <div class="contactMe">
             <ul class="contact">
-                <li class="contact__phone"><i class="fas fa-mobile-alt" style="width:26px;" ></i> Phone : 010 7544 4357</li>
-                <li class="contact__kakao">
-                    <img src="img/kakaotalk.png" alt="kakao talk" class="contact__kakao__img" style="width:26px; display: inline;"/>
+                <li><i class="fas fa-mobile-alt" style="width:26px;" ></i> Phone : 010 7544 4357</li>
+                <li>
+                    <img src="img/kakaotalk.png" alt="kakao talk" style="width:26px; display: inline;"/>
                     kakao : kdha4585
                 </li>
                 <li class="contact__mail">
@@ -202,6 +203,15 @@
                     </a>
                 </li>
             </ul>
+            <div class="contact__send-message">
+                
+                    <input type="text" placeholder="Name"  class="contact__text-box">            
+                    <input type="email" placeholder="Email address" class="contact__text-box">                                
+                    <input type="tel" placeholder="Phone number" class="contact__text-box">                              
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="contact__text-box"></textarea>            
+                    <button type="submit" class="contact__sendBtn">SEND MESSAGE</button>                
+            </div>
+        </div>
         </section>
         <!-- Footer -->
         <footer id="footer">

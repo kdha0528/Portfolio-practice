@@ -341,6 +341,11 @@ button {
     transition: all 0.3s ease-in;
 }
 /* contact */
+.contactMe {
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -349,6 +354,38 @@ button {
     font-size: 1.5em;
     font-weight: 400;
     line-height: 100px;
+}
+
+.contact__send-message {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 50%;
+}
+
+.contact__text-box {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.contact__sendBtn {
+    border: 2px solid white;
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.contact__git i:hover,
+.contact__mail i:hover {
+    color: orange;
+    transition: all 0.3s ease-in;
+}
+
+.contact__sendBtn:hover {
+    border-color: orange;
+    color: orange;
+    transition: all 0.3s ease-in;
 }
 /* footer */
 .footer {
