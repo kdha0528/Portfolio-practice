@@ -1,9 +1,5 @@
 @import 'reset.css';
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-image: url(img/background.png);
     background-size: 20%;
@@ -54,6 +50,7 @@ button {
     margin-left: 1px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar__logo:hover {
@@ -371,8 +368,10 @@ button {
     margin-top: 130px;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     height: 50px;
-    border-top: 2px solid white;
+    border-top: 2px solid lightgrey;
+    color: lightgrey;
 }
 
 @media screen and (max-width: 768px) {

@@ -13,16 +13,16 @@
     <body>
         <!-- NavBar -->
         <nav id="navbar">
-            <a href="#home" class="navbar__logo">
+            <div class="navbar__logo" data-link="#home">
                 <img src="img/whale.png" alt="my_logo" />
                 <h1>Dale</h1>
-            </a>
+            </div>
             <ul class="navbar__menu">
-                <li class="navbar__menu__item"><a href="#home">Home</a></li>
-                <li class="navbar__menu__item"><a href="#about">About</a></li>
-                <li class="navbar__menu__item"><a href="#skills">skills</a></li>
-                <li class="navbar__menu__item"><a href="#projects">Projects</a></li>
-                <li class="navbar__menu__item"><a href="#contact">Contect</a></li>
+                <li class="navbar__menu__item" data-link="#home">Home</li>
+                <li class="navbar__menu__item" data-link="#about">About</li>
+                <li class="navbar__menu__item" data-link="#skills">skills</li>
+                <li class="navbar__menu__item" data-link="#projects">Projects</li>
+                <li class="navbar__menu__item" data-link="#contact">Contect</li>
             </ul>
             <!-- Toggle button -->
             <button class="navbar__toggle-btn">
@@ -214,7 +214,7 @@
         </section>
         <!-- Footer -->
         <footer id="footer">
-            <p class="footer"><i class="far fa-copyright"> 2021 Dale Kim - All rights reserved.</i></p>
+            <p class="footer"><i class="far fa-copyright"> 2021 Dale Kim - All rights reserved. </i></p>
         </footer>
     </body>
 </html>
