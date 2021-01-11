@@ -13,9 +13,9 @@
     <body>
         <!-- NavBar -->
         <nav id="navbar">
-            <div class="navbar__logo" data-link="#home">
-                <img src="img/whale.png" alt="my_logo" />
-                <h1>Dale</h1>
+            <div class="navbar__logo">
+                <img src="img/whale.png" alt="my_logo" data-link="#home" />
+                <h1 data-link="#home">Dale</h1>
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__menu__item" data-link="#home">Home</li>
@@ -31,14 +31,12 @@
         </nav>
         <!-- Home -->
         <section id="home" class="section">
-            <div class="home">
-                <img src="img/dale.png" class="home__img" alt="my_photo" hr />
-                <p class="home__title">Hello, I'm <span class="home__title__dale">Dale</span></p>
-                <p class="home__discription">
-                    I'm studying to become a developer.<br />
-                    and I hope you enjoy reading my portfolio.
-                </p>
-            </div>
+            <img src="img/dale.png" class="home__img" alt="my_photo" hr />
+            <p class="home__title">Hello, I'm <span class="home__title__dale">Dale</span></p>
+            <p class="home__discription">
+                I'm studying to become a developer.<br />
+                and I hope you enjoy reading my portfolio.
+            </p>
         </section>
         <!-- About -->
         <section id="about" class="section">
@@ -216,5 +214,9 @@
         <footer id="footer">
             <p class="footer"><i class="far fa-copyright"> 2021 Dale Kim - All rights reserved. </i></p>
         </footer>
+        <!-- Arrow up -->
+        <div class="arrow_up">
+            <i class="fas fa-arrow-up" data-link="#home"></i>
+        </div>
     </body>
 </html>

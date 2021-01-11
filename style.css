@@ -103,7 +103,7 @@ button {
 }
 
 /* Home */
-.home {
+#home {
     position: relative;
     display: flex;
     overflow: hidden;
@@ -372,6 +372,25 @@ button {
     height: 50px;
     border-top: 2px solid lightgrey;
     color: lightgrey;
+}
+/* Arrow up */
+.arrow_up {
+    position: fixed;
+    font-size: 2.5em;
+    background-color: orange;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    bottom: -100px;
+    right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow_up.arrow_up__visible {
+    bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
