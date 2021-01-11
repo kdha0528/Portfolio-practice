@@ -28,14 +28,19 @@ scrollingFadeIn('#about');
 scrollingFadeIn('#skills');
 scrollingFadeIn('#projects');
 
-//Make button to go to top on the page
-const arrow = document.querySelector('.arrow_up');
+//dhow "arrow up" button when scrolling down
+const arrow = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
-        arrow.classList.add('arrow_up__visible');
+        arrow.classList.add('arrow-up__visible');
     } else {
-        arrow.classList.remove('arrow_up__visible');
+        arrow.classList.remove('arrow-up__visible');
     }
+});
+
+//Handle click on the "arrow up" button
+arrow.addEventListener('click', () => {
+    scrollIntoView('#home');
 });
 
 function scrollingFadeIn(id) {
