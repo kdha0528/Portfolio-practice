@@ -150,6 +150,7 @@ button {
     font-size: 3rem;
     width: 0%;
     padding-top: 100px;
+    color: orange;
 }
 /* About */
 .about {
@@ -202,7 +203,7 @@ button {
 
 .skillset__title {
     font-size: 2rem;
-    padding: 5px;
+    padding-top: 20px;
 }
 
 .skill__description {
@@ -266,11 +267,28 @@ button {
     width: 66%;
     height: 44%;
     position: relative;
+    display: none;
+}
+
+.project__img.project__visible {
+    display: block;
+}
+
+.project__img.first {
+    display: block;
+}
+
+.project__img.first.project__invisible {
+    display: none;
+}
+
+.project__img.first {
+    display: block;
 }
 
 .project__img img {
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     background-color: white;
 }
 
