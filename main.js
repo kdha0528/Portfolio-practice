@@ -43,41 +43,51 @@ arrow.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
-//Project image and button
+//Project image and next-buttonm previous-button.
 const img = document.querySelectorAll('.project__img');
 const right = document.querySelector('.project__rightBtn');
 const left = document.querySelector('.project__leftBtn');
 const first = 0;
 var index = 0;
 right.addEventListener('click', () => {
-    if (index == 0) {
-        img[first].classList.add('project__invisible');
-    }
-    if (index == img.length - 1) {
-        removeProjectImg(img[index]);
-        index = 0;
-        img[first].classList.remove('project__invisible');
-        addProjectImg(img[index]);
-    } else {
-        removeProjectImg(img[index]);
-        index++;
-        addProjectImg(img[index]);
-    }
+    img[index].classList.add('anime-out');
+    setTimeout(() => {
+        if (index == 0) {
+            img[first].classList.add('project__invisible');
+        }
+        if (index == img.length - 1) {
+            removeProjectImg(img[index]);
+            index = 0;
+            img[first].classList.remove('project__invisible');
+            addProjectImg(img[index]);
+            img[img.length - 1].classList.remove('anime-out');
+        } else {
+            removeProjectImg(img[index]);
+            index++;
+            addProjectImg(img[index]);
+            img[index - 1].classList.remove('anime-out');
+        }
+    }, 300);
 });
 left.addEventListener('click', () => {
-    if (index == 1) {
-        img[first].classList.remove('project__invisible');
-    }
-    if (index == 0) {
-        img[first].classList.add('project__invisible');
-        removeProjectImg(img[index]);
-        index = img.length - 1;
-        addProjectImg(img[index]);
-    } else {
-        removeProjectImg(img[index]);
-        index--;
-        addProjectImg(img[index]);
-    }
+    img[index].classList.add('anime-in');
+    setTimeout(() => {
+        if (index == 1) {
+            img[first].classList.remove('project__invisible');
+        }
+        if (index == 0) {
+            img[first].classList.add('project__invisible');
+            removeProjectImg(img[index]);
+            index = img.length - 1;
+            addProjectImg(img[index]);
+            img[0].classList.remove('anime-in');
+        } else {
+            removeProjectImg(img[index]);
+            index--;
+            addProjectImg(img[index]);
+            img[index + 1].classList.remove('anime-in');
+        }
+    }, 300);
 });
 
 function addProjectImg(img) {
