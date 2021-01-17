@@ -49,22 +49,24 @@ const right = document.querySelector('.project__rightBtn');
 const left = document.querySelector('.project__leftBtn');
 const first = 0;
 var index = 0;
+var i = 0;
 right.addEventListener('click', () => {
     img[index].classList.add('anime-out');
     setTimeout(() => {
-        if (index == 0) {
-            img[first].classList.add('project__invisible');
-        }
         if (index == img.length - 1) {
-            removeProjectImg(img[index]);
+            img[index].classList.remove('project__visible');
             index = 0;
-            img[first].classList.remove('project__invisible');
-            addProjectImg(img[index]);
+            img[index].classList.remove('project__invisible');
             img[img.length - 1].classList.remove('anime-out');
-        } else {
-            removeProjectImg(img[index]);
+        } else if (index == 0) {
+            img[index].classList.add('project__invisible');
             index++;
-            addProjectImg(img[index]);
+            img[index].classList.add('project__visible');
+            img[0].classList.remove('anime-out');
+        } else {
+            img[index].classList.remove('project__visible');
+            index++;
+            img[index].classList.add('project__visible');
             img[index - 1].classList.remove('anime-out');
         }
     }, 300);
@@ -72,19 +74,20 @@ right.addEventListener('click', () => {
 left.addEventListener('click', () => {
     img[index].classList.add('anime-in');
     setTimeout(() => {
-        if (index == 1) {
-            img[first].classList.remove('project__invisible');
-        }
         if (index == 0) {
-            img[first].classList.add('project__invisible');
-            removeProjectImg(img[index]);
+            img[index].classList.add('project__invisible');
             index = img.length - 1;
-            addProjectImg(img[index]);
+            img[index].classList.add('project__visible');
             img[0].classList.remove('anime-in');
-        } else {
-            removeProjectImg(img[index]);
+        } else if (index == 1) {
+            img[index].classList.remove('project__visible');
             index--;
-            addProjectImg(img[index]);
+            img[index].classList.remove('project__invisible');
+            img[1].classList.remove('anime-in');
+        } else {
+            img[index].classList.remove('project__visible');
+            index--;
+            img[index].classList.add('project__visible');
             img[index + 1].classList.remove('anime-in');
         }
     }, 300);
