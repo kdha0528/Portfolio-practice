@@ -248,14 +248,9 @@ button {
     line-height: 43px;
 }
 /* Project */
-.project {
-    display: flex;
-    flex-direction: column;
+.projects {
     align-items: center;
     padding-bottom: 100px;
-}
-
-.project__animation {
     padding-top: 160px;
     display: flex;
     justify-content: space-around;
@@ -266,10 +261,10 @@ button {
 .project__img {
     width: 66%;
     height: 44%;
+    display: block;
+    opacity: 1;
     position: relative;
     display: none;
-    overflow: hidden;
-    opacity: 1;
     transition: all 0.3s ease-out;
 }
 
@@ -286,12 +281,12 @@ button {
 }
 
 .project__img.anime-out {
-    transform: scale(0.9) translateY(15%);
+    transform: scale(0.95) translateX(15%);
     opacity: 0;
 }
 
 .project__img.anime-in {
-    transform: scale(0.9) translateY(15%);
+    transform: scale(0.95) translateX(-15%);
     opacity: 0;
 }
 
@@ -318,7 +313,7 @@ button {
 .project__description {
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
