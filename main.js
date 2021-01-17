@@ -19,6 +19,7 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navMenu.classList.remove('show');
     scrollIntoView(link);
 });
 
@@ -49,7 +50,6 @@ const right = document.querySelector('.project__rightBtn');
 const left = document.querySelector('.project__leftBtn');
 const first = 0;
 var index = 0;
-var i = 0;
 right.addEventListener('click', () => {
     img[index].classList.add('anime-out');
     setTimeout(() => {
@@ -91,6 +91,13 @@ left.addEventListener('click', () => {
             img[index + 1].classList.remove('anime-in');
         }
     }, 300);
+});
+
+//navbar toggle button for small screen
+const menuBtn = document.querySelector('.navbar__toggle-btn');
+const navMenu = document.querySelector('.navbar__menu');
+menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
 });
 
 function addProjectImg(img) {
