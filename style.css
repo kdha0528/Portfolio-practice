@@ -422,6 +422,11 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+    .section {
+        padding: 16px;
+        margin: auto;
+        width: 100%;
+    }
     .navbar__toggle-btn {
         display: block;
     }
@@ -471,8 +476,17 @@ button {
     }
 
     .home__img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .home__title {
+        font-size: 3em;
+    }
+
+    .home__discription {
+        font-size: 1.8em;
+        line-height: 80px;
     }
 
     .about {
@@ -508,6 +522,7 @@ button {
     .contact {
         margin-top: 50px;
         line-height: 70px;
+        font-size: 1.5em;
     }
 
     .contact__send-message {
