@@ -6,13 +6,15 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar__dark');
+        navMenu.classList.remove('show');
     } else {
         navbar.classList.remove('navbar__dark');
     }
 });
 
 // Handle scrolling when tapping on the navbar menu.
-const navbarMenu = document.querySelector('#navbar');
+const navbarMenu = document.querySelector('.navbar__menu');
+let selectedNavItem;
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
@@ -21,6 +23,11 @@ navbarMenu.addEventListener('click', (event) => {
     }
     navMenu.classList.remove('show');
     scrollIntoView(link);
+});
+
+const navLogo = document.querySelector('.navbar__logo');
+navLogo.addEventListener('click', () => {
+    scrollIntoView('#home');
 });
 
 //Make home slowlu fade to transparent as the window scrolls down.
@@ -100,31 +107,76 @@ menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 });
 
-function addProjectImg(img) {
-    img.classList.add('project__visible');
-}
+//make animation at the navbar when scrolling the page
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.navbar__menu__item');
+var sectionIds = [];
+navItems.forEach((element) => {
+    sectionIds.push(element.dataset.link);
+});
+console.log(sectionIds);
 
-function removeProjectImg(img) {
-    img.classList.remove('project__visible');
-}
+const options = {
+    threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+    //solution1
+    document.addEventListener('wheel', () => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navItems.forEach((item) => {
+                    if (document.querySelector(item.dataset.link) == entry.target) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            } else {
+                navItems.forEach((item) => {
+                    if (document.querySelector(item.dataset.link) == entry.target) {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+};
+
+const observer = new IntersectionObserver(observerCallback, options);
+
+sections.forEach((section) => observer.observe(section));
+
+//-----------function-----------
 
 function scrollingFadeIn(id) {
     const selector = document.querySelector(id);
     const selectorHeight = selector.getBoundingClientRect().height;
-    const position = selector.getBoundingClientRect().top;
+    const position = selector.getBoundingClientRect().bottom;
     console.log(position);
     document.addEventListener('scroll', () => {
-        console.log(window.scrollY);
-        console.log(position);
-        if (window.scrollY - position <= selectorHeight) {
-            selector.style.opacity = 1.1 - (window.scrollY - position) / selectorHeight;
+        if (position - window.scrollY <= selectorHeight) {
+            if (window.screen.width <= 768) {
+                selector.style.opacity = 0.2 + (position - window.scrollY) / selectorHeight;
+            } else {
+                selector.style.opacity = (position - window.scrollY) / selectorHeight;
+            }
         } else {
-            selector.style.opacity = 0;
+            selector.style.opacity = 1;
         }
     });
+}
+
+function selectNavItem(selected) {
+    if (selectedNavItem != null) {
+        selectedNavItem.classList.remove('active');
+    }
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('active');
 }
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth' });
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
