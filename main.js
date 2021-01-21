@@ -156,7 +156,11 @@ function scrollingFadeIn(id) {
     console.log(position);
     document.addEventListener('scroll', () => {
         if (position - window.scrollY <= selectorHeight) {
-            selector.style.opacity = (position - window.scrollY) / selectorHeight;
+            if (window.screen.width <= 768) {
+                selector.style.opacity = 0.2 + (position - window.scrollY) / selectorHeight;
+            } else {
+                selector.style.opacity = (position - window.scrollY) / selectorHeight;
+            }
         } else {
             selector.style.opacity = 1;
         }
