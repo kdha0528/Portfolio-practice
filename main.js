@@ -31,10 +31,7 @@ navLogo.addEventListener('click', () => {
 });
 
 //Make home slowlu fade to transparent as the window scrolls down.
-scrollingFadeIn('#home');
-scrollingFadeIn('#about');
-scrollingFadeIn('#skills');
-scrollingFadeIn('#projects');
+window.addEventListener('scroll', scrollingFadeIn);
 
 //dhow "arrow up" button when scrolling down
 const arrow = document.querySelector('.arrow-up');
@@ -150,20 +147,13 @@ sections.forEach((section) => observer.observe(section));
 //-----------function-----------
 
 function scrollingFadeIn(id) {
-    const selector = document.querySelector(id);
-    const selectorHeight = selector.getBoundingClientRect().height;
-    const position = selector.getBoundingClientRect().bottom;
-    console.log(position);
-    document.addEventListener('scroll', () => {
-        if (position - window.scrollY <= selectorHeight) {
-            if (window.screen.width <= 768) {
-                selector.style.opacity = 0.2 + (position - window.scrollY) / selectorHeight;
-            } else {
-                selector.style.opacity = (position - window.scrollY) / selectorHeight;
-            }
-        } else {
-            selector.style.opacity = 1;
-        }
+    document.querySelectorAll('.section').forEach((item) => {
+        let top = item.getBoundingClientRect().top;
+        let bottom = item.getBoundingClientRect().bottom;
+        let scrollY = window.scrollY;
+        const abslutePosTop = top + scrollY;
+        const abslutePosBot = bottom + scrollY;
+        item.style.opacity = bottom / (abslutePosBot - abslutePosTop);
     });
 }
 
