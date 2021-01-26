@@ -117,7 +117,7 @@ const options = {
     threshold: 0.3,
 };
 
-const observerCallback = (entries, observer) => {
+const observerCallback = (entries) => {
     //solution1
     document.addEventListener('wheel', () => {
         entries.forEach((entry) => {
@@ -146,14 +146,15 @@ sections.forEach((section) => observer.observe(section));
 
 //-----------function-----------
 
-function scrollingFadeIn(id) {
+function scrollingFadeIn() {
     document.querySelectorAll('.section').forEach((item) => {
-        let top = item.getBoundingClientRect().top;
         let bottom = item.getBoundingClientRect().bottom;
-        let scrollY = window.scrollY;
-        const abslutePosTop = top + scrollY;
-        const abslutePosBot = bottom + scrollY;
-        item.style.opacity = bottom / (abslutePosBot - abslutePosTop);
+        console.log(bottom);
+        if (bottom <= window.innerHeight / 2) {
+            item.style.opacity = bottom / (window.innerHeight / 2);
+        } else {
+            item.style.opacity = 1;
+        }
     });
 }
 
