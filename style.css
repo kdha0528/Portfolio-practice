@@ -451,7 +451,7 @@ button {
 
 @media screen and (max-width: 768px) {
     body {
-        background-size: 100%;
+        background-size: 50%;
     }
 
     .section {
