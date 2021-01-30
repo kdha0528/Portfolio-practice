@@ -140,7 +140,7 @@ button {
 
 .home__discription {
     font-size: 2rem;
-    line-height: 100px;
+    line-height: 90px;
 }
 
 .home__title__dale {
@@ -290,13 +290,23 @@ button {
     display: block;
 }
 
-.project__img.anime-out {
-    transform: scale(0.95) translateX(15%);
+.project__img.anime-right-out {
+    transform: scale(0.86) translateX(30%);
     opacity: 0;
 }
 
-.project__img.anime-in {
-    transform: scale(0.95) translateX(-15%);
+.project__img.anime-left-out {
+    transform: scale(0.86) translateX(-30%);
+    opacity: 0;
+}
+
+.project__img.anime-right-in {
+    transform: scale(0.86) translateX(-30%);
+    opacity: 0;
+}
+
+.project__img.anime-left-in {
+    transform: scale(0.86) translateX(30%);
     opacity: 0;
 }
 
@@ -521,7 +531,7 @@ button {
 
     .home__discription {
         font-size: 1em;
-        line-height: 80px;
+        line-height: 82px;
     }
 
     .about {

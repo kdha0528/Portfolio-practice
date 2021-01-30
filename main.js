@@ -31,10 +31,7 @@ navLogo.addEventListener('click', () => {
 });
 
 //Make home slowlu fade to transparent as the window scrolls down.
-scrollingFadeIn('#home');
-scrollingFadeIn('#about');
-scrollingFadeIn('#skills');
-scrollingFadeIn('#projects');
+window.addEventListener('scroll', scrollingFadeIn);
 
 //dhow "arrow up" button when scrolling down
 const arrow = document.querySelector('.arrow-up');
@@ -58,45 +55,69 @@ const left = document.querySelector('.project__leftBtn');
 const first = 0;
 var index = 0;
 right.addEventListener('click', () => {
-    img[index].classList.add('anime-out');
+    img[index].classList.add('anime-right-out');
+    if (index == img.length - 1) {
+        img[0].classList.add('anime-right-in');
+    } else {
+        img[index + 1].classList.add('anime-right-in');
+    }
     setTimeout(() => {
         if (index == img.length - 1) {
             img[index].classList.remove('project__visible');
             index = 0;
             img[index].classList.remove('project__invisible');
-            img[img.length - 1].classList.remove('anime-out');
         } else if (index == 0) {
             img[index].classList.add('project__invisible');
             index++;
             img[index].classList.add('project__visible');
-            img[0].classList.remove('anime-out');
         } else {
             img[index].classList.remove('project__visible');
             index++;
             img[index].classList.add('project__visible');
-            img[index - 1].classList.remove('anime-out');
         }
+    }, 270);
+    setTimeout(() => {
+        if (index == img.length - 1) {
+            img[img.length - 1].classList.remove('anime-right-out');
+        } else if (index == 0) {
+            img[0].classList.remove('anime-right-out');
+        } else {
+            img[index].classList.remove('anime-right-out');
+        }
+        img[index].classList.remove('anime-right-in');
     }, 300);
 });
 left.addEventListener('click', () => {
-    img[index].classList.add('anime-in');
+    img[index].classList.add('anime-left-out');
+    if (index == 0) {
+        img[img.length - 1].classList.add('anime-left-in');
+    } else {
+        img[index - 1].classList.add('anime-left-in');
+    }
     setTimeout(() => {
         if (index == 0) {
             img[index].classList.add('project__invisible');
             index = img.length - 1;
             img[index].classList.add('project__visible');
-            img[0].classList.remove('anime-in');
         } else if (index == 1) {
             img[index].classList.remove('project__visible');
             index--;
             img[index].classList.remove('project__invisible');
-            img[1].classList.remove('anime-in');
         } else {
             img[index].classList.remove('project__visible');
             index--;
             img[index].classList.add('project__visible');
-            img[index + 1].classList.remove('anime-in');
         }
+    }, 270);
+    setTimeout(() => {
+        if (index == 0) {
+            img[0].classList.remove('anime-left-out');
+        } else if (index == 1) {
+            img[1].classList.remove('anime-left-out');
+        } else {
+            img[index].classList.remove('anime-left-out');
+        }
+        img[index].classList.remove('anime-left-in');
     }, 300);
 });
 
@@ -120,7 +141,7 @@ const options = {
     threshold: 0.3,
 };
 
-const observerCallback = (entries, observer) => {
+const observerCallback = (entries) => {
     //solution1
     document.addEventListener('wheel', () => {
         entries.forEach((entry) => {
@@ -149,16 +170,14 @@ sections.forEach((section) => observer.observe(section));
 
 //-----------function-----------
 
-function scrollingFadeIn(id) {
-    const selector = document.querySelector(id);
-    const selectorHeight = selector.getBoundingClientRect().height;
-    const position = selector.getBoundingClientRect().bottom;
-    console.log(position);
-    document.addEventListener('scroll', () => {
-        if (position - window.scrollY <= selectorHeight) {
-            selector.style.opacity = (position - window.scrollY) / selectorHeight;
+function scrollingFadeIn() {
+    document.querySelectorAll('.section').forEach((item) => {
+        let bottom = item.getBoundingClientRect().bottom;
+        console.log(bottom);
+        if (bottom <= window.innerHeight / 2) {
+            item.style.opacity = bottom / (window.innerHeight / 2);
         } else {
-            selector.style.opacity = 1;
+            item.style.opacity = 1;
         }
     });
 }
