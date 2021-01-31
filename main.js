@@ -143,7 +143,7 @@ const options = {
 
 const observerCallback = (entries) => {
     //solution1
-    document.addEventListener('wheel', () => {
+    document.addEventListener('scroll', () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 navItems.forEach((item) => {

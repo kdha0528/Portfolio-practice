@@ -127,20 +127,20 @@ button {
     height: 300px;
     display: block;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 125px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
 .home__title {
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 4rem;
     margin-bottom: 30px;
 }
 
 .home__discription {
     font-size: 2rem;
-    line-height: 90px;
+    line-height: 100px;
 }
 
 .home__title__dale {
@@ -190,7 +190,8 @@ button {
 .about__description {
     margin-top: 20px;
     line-height: 40px;
-    width: 0%;
+    width: 100%;
+    text-align: left;
     font-size: 1rem;
 }
 
@@ -519,19 +520,19 @@ button {
     }
 
     .home__img {
-        margin-top: 175px;
+        margin-top: 160px;
         width: 200px;
         height: 200px;
     }
 
     .home__title {
         font-size: 2em;
-        margin-top: 70px;
+        margin-top: 80px;
     }
 
     .home__discription {
         font-size: 1em;
-        line-height: 82px;
+        line-height: 90px;
     }
 
     .about {
